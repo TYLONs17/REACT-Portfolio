@@ -1,5 +1,6 @@
 import "./intro.css"
 import Me from "../../assets/images/Me.png"
+import MouseSVG from "./MouseSVG.jsx"
 import Mouse from "../../assets/icons/DooFi-Mouse.svg"
 
 const Intro = () => {
@@ -7,7 +8,7 @@ const Intro = () => {
         <div className="intro">
             <div className="intro-left">
                 <div className="intro-left-wrapper">
-                    <h3 className="intro-head">Hi There! 👋, The Name's - </h3>
+                    <h3 className="intro-head">Hi There! 👋, The Name's -  </h3>
                     <h1 className="intro-name">TYLONs17&trade;</h1>
                     <div className="intro-title">
                         <div className="intro-title-wrapper">
@@ -24,9 +25,9 @@ const Intro = () => {
                         specializing in creating stylish, modern websites, web services and online stores.
                     </p>
                 </div>
-                <svg className="intro-scroll"
-                    xmlns="http://www.w3.org/2000/svg"
-                >{Mouse}</svg>
+
+                {/* <MouseSVG className="intro-scroll"/> */}
+                
             </div>
             <div className="intro-right">
                 <div className="intro-bg"></div>
