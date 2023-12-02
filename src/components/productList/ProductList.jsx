@@ -2,15 +2,14 @@ import "./productList.css"
 import Product from "../product/Product"
 import { products } from "../../data"
 
-export default function ProductList() {
+export default function ProductList(themeBackground) {
     return (
-        <div className="productList">
+        <div className="productList" style={{backgroundColor: themeBackground}}>
             <div className="productList-texts">
                 <div className="productList-title">Create & Inspire. JALESnotJAQUE</div>
                 <p className="productList-desc">
-                    namae is a creative portfolio that your work has been waiting for
-                    beutiful homes, stunning portfolio styles &  a whole lot more
-                    inside.
+                    <h3>Explore My Work</h3>
+                    <p>Check out some of the projects I've worked on. Each one a unique foretelling of my journey, skills & passion.</p>
                 </p>
             </div>
             <div className="productList-list">

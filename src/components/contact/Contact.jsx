@@ -1,13 +1,13 @@
 import "./contact.css"
-
-//
+import call from "../../assets/icons/call-icon.svg"
+import email from "../../assets/icons/email-icon.svg"
+import address from "../../assets/icons/address-icon.svg"
 
 import { ThemeContext } from "../../context";
-
-import {useContext,useRef, useState} from "react"
+import { useContext, useRef, useState } from "react"
 import emailjs from '@emailjs/browser';
 
-export default function Contact() {
+export default function Contact({ themeTextColor, themeBackground }) {
         const formRef = useRef()
         const [done,setDone] = useState(false)
 
@@ -28,21 +28,20 @@ export default function Contact() {
 
     return (
         <div className="contact">
-            <div className="contact-bg"> hi</div>
-            <div className="contact wrapper">
-                <div className="contact-left">
-                    <h1 className="contact-title">Let's discuss your project</h1>
+            <div className="contact-wrapper">
+                <div className="contact-left" style={{backgroundColor: themeBackground}}>
+                    <h1 className="contact-title" style={{ color: themeTextColor }}>Let's Connect!</h1>
                     <div className="contact-info">
                         <div className="contact-info-item">
-                            <img src="" alt="Phone" className="contact-icon" />
+                            <img src={call} alt="Phone" className="contact-icon" />
                             <span className="contact-info-text">O68 444 3922</span>
                         </div>
                         <div className="contact-info-item">
-                            <img src="" alt="Email" className="contact-icon" />
+                            <img src={email} alt="Email" className="contact-icon" />
                             <a href="" className="contact-link">jalesnotjaque@gmail.com</a>
                         </div>
                         <div className="contact-info-item">
-                            <img src="" alt="Address" className="contact-icon" />
+                            <img src={address} alt="Address" className="contact-icon" />
                             <div className="contact-info-item-text">
                                 <p>12 DS Pienarr ST, Oranjisieg</p>
                                 <p>Bloemfontein, 9300</p>
@@ -53,7 +52,7 @@ export default function Contact() {
                 </div>
                 <div className="contact-right">
                     <p className="contact-desc">
-                        <b>What's your story?</b> Get in touch. Always available for freelancing if the right project comes along my way.
+                        <b>Have something to say?</b> Feel free to reach out. <br/> I'm always excited to collaborate and discuss new opportunities.
                     </p>
                     <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
                         <input style={{backgroundColor: darkMode && "#333"}} type="text" placeholder="Name"  name="user_name"/>
@@ -61,7 +60,7 @@ export default function Contact() {
                         <input style={{backgroundColor: darkMode && "#333"}} type="text" placeholder="Subject" name="user_" />
                         <textarea style={{backgroundColor: darkMode && "#333"}}  rows="5" placeholder="Message" name="message"></textarea>
                         <button type="submit" className="contact-btn">Send</button>
-                        {done && <p className="contact-success">Your message has been sent!</p>}
+                        {done && <p className="contact-success">Your message has been sent! <br />Thank You...</p>}
                     </form>
                 </div>
             </div>

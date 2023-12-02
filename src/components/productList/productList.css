@@ -1,6 +1,6 @@
 .productList {
-    background: blueviolet; 
-    height: 70vh;
+    /* background: blueviolet;  */
+    height: 100vh;
     padding: 50px 100px;
     display: flex;
     flex-flow: column;
@@ -15,11 +15,12 @@
 }
 
 .productList-title {
-    font-size: 50px;
-    font-size: 600;
+    font-size: 6rem;
+    font-weight: 600;
 }
 
 .productList-desc {
+    font-size: 2rem;
     margin: 20px 0px;
 }
 
@@ -38,4 +39,8 @@
     .productList-texts {
         width: 100%;
     }
+
+    /* .productList-desc {
+        display: none;
+    } */
 }
