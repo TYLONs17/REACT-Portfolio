@@ -35,8 +35,8 @@
 
 
 .intro-head {
-    font-size: 5rem;
-    font-weight: 300;
+    font-size: 3rem;
+    font-weight: bold;
     animation: jump 2s infinite;
   }
   

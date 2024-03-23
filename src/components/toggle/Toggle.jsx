@@ -11,10 +11,10 @@ export default function Toggle() {
         theme.dispatch({type: "TOGGLE"})
      }
     return(
-        <div className="toggle">
+        <div className="toggle" onClick={handleClick}>
             <img src={Sun} alt="sun" className="toggle-icon"/>
             <img src={Moon} alt="moon" className="toggle-icon"/>
-            <div className="toggle-button" onClick={handleClick} style={{left: theme.state.darkMode ? -7 : 37}}></div>
+            <div className="toggle-button" style={{left: theme.state.darkMode ? -0 : 38}}></div>
         </div>
     )
 }

@@ -30,7 +30,7 @@ export default function Contact({ themeTextColor, themeBackground }) {
         <div className="contact">
             <div className="contact-wrapper">
                 <div className="contact-left" style={{backgroundColor: themeBackground}}>
-                    <h1 className="contact-title" style={{ color: themeTextColor }}>Let's Connect!</h1>
+                    <h1 className="contact-title" style={{ color: themeTextColor }}>Let&apos;s Connect!</h1>
                     <div className="contact-info">
                         <div className="contact-info-item">
                             <img src={call} alt="Phone" className="contact-icon" />
@@ -46,13 +46,15 @@ export default function Contact({ themeTextColor, themeBackground }) {
                                 <p>12 DS Pienarr ST, Oranjisieg</p>
                                 <p>Bloemfontein, 9300</p>
                             </div>
-    
                         </div>
                     </div>
                 </div>
+                
                 <div className="contact-right">
                     <p className="contact-desc">
-                        <b>Have something to say?</b> Feel free to reach out. <br/> I'm always excited to collaborate and discuss new opportunities.
+                        <b>Have something to say?</b> <br/>
+                        <i>Feel free to reach out. </i> <br/> 
+                        <span>I&apos;m always excited to collaborate and discuss new opportunities.</span>
                     </p>
                     <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
                         <input style={{backgroundColor: darkMode && "#333"}} type="text" placeholder="Name"  name="user_name"/>

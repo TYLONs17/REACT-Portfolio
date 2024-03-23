@@ -1,9 +1,10 @@
 import "./intro.css"
 import Me from "../../assets/images/Me.png"
-import MouseSVG from "./MouseSVG.jsx"
+// import MouseSVG from "./MouseSVG.jsx"
 import Lottie from "lottie-react"
 import animationData from "../../assets/icons/Animation - 1701548833834.json"
 import { useRef } from "react"
+import Scroll from "../scroll/Scroll"
 
 export default function Intro ({themeBackground})  {
     const lottieAnima = useRef()
@@ -12,9 +13,10 @@ export default function Intro ({themeBackground})  {
         <div className="intro" style={{backgroundColor: themeBackground}}>
             <div className="intro-left">
                 <div className="intro-left-wrapper">
-                    <h3 className="intro-head">Hi There!<span className="wave">👋🏾</span>, The Name's -  </h3>
+                    <h3 className="intro-head">Hi There!<span className="wave">👋🏾</span>, The Name&apos;s -  </h3>
                     <h1 className="intro-name">TYLONs17&trade;</h1>
                     <p className="intro-desc">Welcome to my website, where technology meets creativity </p>
+                    <br />
                     <div className="intro-title">
                         <div className="intro-title-wrapper">
                             <div className="intro-item-title">Web Developer</div>
@@ -24,18 +26,22 @@ export default function Intro ({themeBackground})  {
                             <div className="intro-item-title">Content Creator</div>
                             <div className="intro-item-title">Fitness/Martial Arts Enthusiast</div>
                         </div>
-                    </div>
+                    </div>  
                     <p className="intro-desc">
                         – 
-                        explore the digital realm through the lens of a Computer-Networking Student/Web-dev enthusiast mastering C#, Python, Java, and web technologies like HTML, CSS, and JavaScript, with a keen interest in React.js and the now popular Next.js Framework. 
+                        explore the digital realm through the lens of a Computer-Networking Student/Web-dev enthusiast 
+                        {/* mastering C#, Python, Java, and web technologies like HTML, CSS, and JavaScript, with a keen interest in React.js and the now popular Next.js Framework.  */}
                     </p>
 
-                    <p>"Live for a Perfect End!"</p>
+                    <br></br>
+                    <p>&quot;Live for a Perfect End!&quot;</p>
                 </div>
 
                 {/* <MouseSVG className="intro-scroll"/> */}
 
                 <Lottie  lottieRef={lottieAnima} loop={true} animationData={animationData} />
+                
+                <Scroll pointTo="#about" />
                 
             </div>
             <div className="intro-right">

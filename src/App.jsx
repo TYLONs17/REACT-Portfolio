@@ -6,8 +6,10 @@ import About from "./components/about/About"
 import ProductList from "./components/productList/ProductList"
 import Contact from "./components/contact/Contact"
 import BackToUp from '@uiw/react-back-to-top' 
+import Footer from "./sections/Footer"
 import { ThemeContext } from "./context"
 import { useContext } from "react"
+
 
 
 
@@ -26,6 +28,7 @@ export default function App() {
       <ProductList themeBackground={darkMode ? "slategray" : "blueviolet"} />
       <Contact themeTextColor={darkMode ? "white" : "black"} themeBackground={darkMode ? "slategray" : "blueviolet"} />
       <BackToUp>TOP</BackToUp> 
+      <Footer />
     </div>
   )
 }
